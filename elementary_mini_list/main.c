@@ -37,7 +37,7 @@ int main(void) {
             t = t->next;
         }
     }
-    tmp->next = head;
+    tmp->next = head;//赋值头部
     head = tmp;
     print_list(head);
     return 0;
