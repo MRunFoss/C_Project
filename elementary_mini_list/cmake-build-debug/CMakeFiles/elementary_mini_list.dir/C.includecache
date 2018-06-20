@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/mrun/Documents/C/C_test/elementary_mini_list/main.c
+/mnt/e/C/C_Project/elementary_mini_list/main.c
+main.h
+/mnt/e/C/C_Project/elementary_mini_list/main.h
 stdio.h
 -
-main.h
-/Users/mrun/Documents/C/C_test/elementary_mini_list/main.h
+stdlib.h
+-
+time.h
+-
 
-/Users/mrun/Documents/C/C_test/elementary_mini_list/main.h
+/mnt/e/C/C_Project/elementary_mini_list/main.h
 

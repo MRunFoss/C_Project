@@ -1,3 +1,3 @@
-/Users/mrun/Documents/C/C_test/elementary_mini_list/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/mrun/Documents/C/C_test/elementary_mini_list/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/mrun/Documents/C/C_test/elementary_mini_list/cmake-build-debug/CMakeFiles/elementary_mini_list.dir
+/mnt/e/C/C_Project/elementary_mini_list/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/e/C/C_Project/elementary_mini_list/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/e/C/C_Project/elementary_mini_list/cmake-build-debug/CMakeFiles/elementary_mini_list.dir

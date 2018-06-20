@@ -11,7 +11,7 @@ int main(void) {
     link *t, *tmp, *head;
     int min;
 
-    t = new_list();
+    t = new_link();
     head = t;
     min = t->item;
     t = t->next;
@@ -24,19 +24,21 @@ int main(void) {
     t = head;
     print_list(t);
     if (t->item != min){
-
+        while (t->next != NULL){
+            if (t->next->item == min){
+                tmp = t->next;
+                if (tmp != NULL){
+                    t->next = tmp->next;
+                }else{
+                    t->next = NULL;
+                }
+                break;
+            }
+            t = t->next;
+        }
     }
-//    if (min != last_item(t)) {
-//        while (t->next != NULL) {
-//            if (t->next->item == min) {
-//                tmp = t->next;
-//                t->next = t->next->next;
-//                tmp->next = NULL;
-//            }
-//            t = t->next;
-//        }
-//        t->next = tmp;
-//    }
+    tmp->next = head;
+    head = tmp;
     print_list(head);
     return 0;
 }
@@ -51,16 +53,7 @@ void print_list(link *t)
     printf("\n");
 }
 
-int last_item(link *t)
-{
-    while (t->next != NULL){
-        t = t->next;
-    }
-    return t->item;
-}
-
-
-link * new_list()
+link * new_link()
 {
     srand(time(NULL));
     link *head,*new,*t = NULL;
