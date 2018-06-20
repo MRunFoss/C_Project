@@ -38,35 +38,31 @@ int main(void) {
     return 0;
 }
 
-void print_list(link *t)
-{
-    while (t != NULL)
-    {
+void print_list(link *t) {
+    while (t != NULL) {
         printf("%d ", t->item);
         t = t->next;
     }
     printf("\n");
 }
 
-int last_item(link *t)
-{
-    while (t->next != NULL){
+int last_item(link *t) {
+    while (t->next != NULL) {
         t = t->next;
     }
     return t->item;
 }
 
 
-link * new_list()
-{
+link *new_list() {
     srand(time(NULL));
-    link *head,*new,*t = NULL;
+    link *head, *new, *t = NULL;
     for (int i = 0; i < 5; ++i) {
-        new = new_node(rand()%100);
-        if (t == NULL){
+        new = new_node(rand() % 100);
+        if (t == NULL) {
             t = new;
             head = new;
-        }else{
+        } else {
             t->next = new;
             t = t->next;
         }
@@ -74,11 +70,10 @@ link * new_list()
     return head;
 }
 
-link* new_node(int n)
-{
+link *new_node(int n) {
     link *t = NULL;
     t = malloc(sizeof(link));
-    if(t != NULL){
+    if (t != NULL) {
         t->item = n;
         t->next = NULL;
     }

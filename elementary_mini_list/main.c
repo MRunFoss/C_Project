@@ -16,20 +16,20 @@ int main(void) {
     min = t->item;
     t = t->next;
     while (t != NULL) {//遍历取得最小的元素
-        if (t->item <  min) {
+        if (t->item < min) {
             min = t->item;
         }
         t = t->next;
     }
     t = head;
     print_list(t);
-    if (t->item != min){
-        while (t->next != NULL){
-            if (t->next->item == min){
+    if (t->item != min) {
+        while (t->next != NULL) {
+            if (t->next->item == min) {
                 tmp = t->next;
-                if (tmp != NULL){
+                if (tmp != NULL) {
                     t->next = tmp->next;
-                }else{
+                } else {
                     t->next = NULL;
                 }
                 break;
@@ -43,26 +43,23 @@ int main(void) {
     return 0;
 }
 
-void print_list(link *t)
-{
-    while (t != NULL)
-    {
+void print_list(link *t) {
+    while (t != NULL) {
         printf("%d ", t->item);
         t = t->next;
     }
     printf("\n");
 }
 
-link * new_link()
-{
+link *new_link() {
     srand(time(NULL));
-    link *head,*new,*t = NULL;
+    link *head, *new, *t = NULL;
     for (int i = 0; i < 5; ++i) {
-        new = new_node(rand()%100);
-        if (t == NULL){
+        new = new_node(rand() % 100);
+        if (t == NULL) {
             t = new;
             head = new;
-        }else{
+        } else {
             t->next = new;
             t = t->next;
         }
@@ -70,11 +67,10 @@ link * new_link()
     return head;
 }
 
-link* new_node(int n)
-{
+link *new_node(int n) {
     link *t = NULL;
     t = malloc(sizeof(link));
-    if(t != NULL){
+    if (t != NULL) {
         t->item = n;
         t->next = NULL;
     }

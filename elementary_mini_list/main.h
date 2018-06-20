@@ -4,12 +4,13 @@
 
 typedef struct node link;
 
-struct node
-{
+struct node {
     int item;
     link *next;
 };
 
-link * new_node(int);
-link * new_link(void);
-void print_list(link*);
+link *new_node(int);
+
+link *new_link(void);
+
+void print_list(link *);
