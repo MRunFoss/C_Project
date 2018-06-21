@@ -1,1 +1,0 @@
-/usr/bin/cc  -g   CMakeFiles/elementary_mini_list.dir/main.c.o  -o elementary_mini_list 

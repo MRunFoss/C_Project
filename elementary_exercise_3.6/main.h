@@ -18,3 +18,4 @@ link * new_node(int);
 link * new_link();
 void print_list(link*);
 link * add_last(int,link*);
+link * concat_lists(link*,link*);
