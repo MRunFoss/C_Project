@@ -7,4 +7,13 @@
 
 #endif //ELEMENTARY_EXERCISE_3_9_LIST_H
 
-typedef 
+typedef struct node link;
+
+struct node{
+    int item;
+    link * next;
+};
+
+link* new_node(int);
+link* new_link();
+void print_list(link*);
