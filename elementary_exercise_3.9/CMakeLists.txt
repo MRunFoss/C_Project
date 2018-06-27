@@ -3,4 +3,4 @@ project(elementary_exercise_3_9 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(elementary_exercise_3_9 main.c)
+add_executable(elementary_exercise_3_9 main.c list.h)
