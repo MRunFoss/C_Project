@@ -42,3 +42,10 @@ void print_list(link* t){
     }
     printf("\n");
 }
+
+void delete_node(link*h,link*t){
+    link* head = h;
+    if (t->next != NULL){
+        h->next = h->next->next;
+    }
+}
