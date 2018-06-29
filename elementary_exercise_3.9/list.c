@@ -44,8 +44,17 @@ void print_list(link* t){
 }
 
 void delete_node(link*h,link*t){
-    link* head = h;
-    if (t->next != NULL){
-        h->next = h->next->next;
+    if (t->next == NULL){
+        while(h->next->next != NULL){
+            h = h->next;
+        }
+        h->next = NULL;
+    }else{
+        while(h->next != NULL){
+            if (h->next == t){
+                h->next = t->next;
+                break;
+            }
+        }
     }
 }
