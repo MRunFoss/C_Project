@@ -16,5 +16,8 @@ struct node{
 
 link* new_node(int);
 link* new_link();
+//link* remove_item(void*,link*);
+
 void print_list(link*);
 void delete_link(link*,link*);
+int func(link*);

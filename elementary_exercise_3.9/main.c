@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include "list.h"
 
+typedef int (*FunType)(link*);
+link* remove_item(FunType,link*);
+
 int main(void) {
     link * t;
 
     t = new_link();
     print_list(t);
 
-    if
+    remove_item(func,t);
 }
 
 int func(link* t){
@@ -20,7 +23,7 @@ int func(link* t){
 
 
 link* remove_item(int (*f)(link*),link* t){
-    link* head;
+    link* head = t;
 
     while (t != NULL){
         if (!(f(head))){
